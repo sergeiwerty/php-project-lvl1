@@ -1,0 +1,20 @@
+{
+    "name": "hexlet/code",
+    "description": "simple math game on php",
+    "autoload": {
+        "psr-4": {
+            "Hexlet\\Code\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Sergey",
+            "email": "debrecin@yandex.ru"
+        }
+    ],
+    "require": {},
+    "bin": [
+        "bin/brain-games"
+    ],
+    "license": "MIT"
+}
