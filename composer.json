@@ -2,9 +2,9 @@
     "name": "hexlet/code",
     "description": "simple math game on php",
     "autoload": {
-        "psr-4": {
-            "Hexlet\\Code\\": "src/"
-        }
+        "files": [
+            "src/brain-games/Cli.php"
+        ]
     },
     "authors": [
         {
@@ -12,7 +12,9 @@
             "email": "debrecin@yandex.ru"
         }
     ],
-    "require": {},
+    "require": {
+        "wp-cli/php-cli-tools": "^0.11.13"
+    },
     "bin": [
         "bin/brain-games"
     ],
