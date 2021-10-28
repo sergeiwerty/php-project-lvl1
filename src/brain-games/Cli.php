@@ -1,4 +1,5 @@
 <?php
+
 namespace Brain\Games\Cli;
 
 //use Cli\Out;
@@ -11,7 +12,8 @@ namespace Brain\Games\Cli;
 //  line('Welcome to the Brain Game!');
 //  $name = prompt('May I have your name?');
 //  line("Hello, %!", $name);
-function greet () {
+function greet()
+{
     \cli\line('Welcome to the Brain Game!');
     $name = \cli\prompt('May I have your name? ');
     \cli\line("Hello, %s!", $name);
