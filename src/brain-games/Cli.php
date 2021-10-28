@@ -12,6 +12,7 @@ namespace Brain\Games\Cli;
 //  $name = prompt('May I have your name?');
 //  line("Hello, %!", $name);
 function greet () {
-    $answer = \cli\out("some random text");
-    return $answer;
+    \cli\line('Welcome to the Brain Game!');
+    $name = \cli\prompt('May I have your name? ');
+    \cli\line("Hello, %s!", $name);
 }
