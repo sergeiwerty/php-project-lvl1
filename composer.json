@@ -3,8 +3,10 @@
     "description": "simple math game on php",
     "autoload": {
         "files": [
-            "src/brain-games/Cli.php",
-            "src/brain-games/BrainEven.php"
+            "src/Games/Cli.php",
+            "src/Games/BrainEven.php",
+            "src/Games/BrainCalc.php",
+            "src/Engine.php"
         ]
     },
     "authors": [
@@ -18,7 +20,8 @@
     },
     "bin": [
         "bin/brain-games",
-        "bin/brain-even"
+        "bin/brain-even",
+        "bin/brain-calc"
     ],
     "license": "MIT",
     "require-dev": {

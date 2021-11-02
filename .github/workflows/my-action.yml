@@ -1,4 +1,4 @@
-name: brain-games CI
+name: Games CI
 on: push
 jobs:
   my-job:
