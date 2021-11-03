@@ -24,5 +24,5 @@ function runEngine($description, $roundData)
         }
         line("Correct!");
     }
-    line("Congratulations, {$name}");
+    line("Congratulations, {$name}!");
 }
