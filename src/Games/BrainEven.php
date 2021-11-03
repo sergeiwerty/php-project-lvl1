@@ -2,30 +2,21 @@
 
 namespace Brain\Games\BrainEven;
 
-$autoloadPath1 = __DIR__ . '/../../../autoload.php';
-$autoloadPath2 = __DIR__ . '/../vendor/autoload.php';
-
-if (file_exists($autoloadPath1)) {
-    require_once $autoloadPath1;
-} else {
-    require_once $autoloadPath2;
-}
-
-use Brain\Games\Engine;
+use function Brain\Games\Engine\runEngine;
 
 function isEven($num): bool
 {
     return $num % 2 === 0;
 }
 
-$description = "Answer 'yes' if the number is even, otherwise answer 'no'";
-
-$getRoundData = function()
+function runEvenGame()
 {
+    $description = "Answer 'yes' if the number is even, otherwise answer 'no'.";
+    $roundData = function () {
         $num = rand(0, 99);
-        $question = \cli\prompt("Your answer: ");
+        $question = strval($num);
         $correctAnswer = isEven($num) ? 'yes' : 'no';
         return [$question, $correctAnswer];
-};
-
-Engine\runEngine($description, $getRoundData);
+    };
+    return runEngine($description, $roundData);
+}

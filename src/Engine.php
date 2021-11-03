@@ -2,24 +2,27 @@
 
 namespace Brain\Games\Engine;
 
-function runEngine ($description, $getRoundData)
+use function cli\line as line;
+use function cli\prompt as prompt;
+
+function runEngine($description, $roundData)
 {
     $roundsCount = 3;
 
-    \cli\line('Welcome to the Brain Game!');
-    $name = \cli\prompt('May I have your name? ');
-    \cli\line("Hello, %s!", $name);
-    \cli\line($description);
+    line('Welcome to the Brain Game!');
+    $name = prompt('May I have your name? ');
+    line("Hello, %s!", $name);
+    line($description);
     for ($i = 0; $i < $roundsCount; $i += 1) {
-        list($question, $correctAnswer) = $getRoundData();
-        \cli\line("Question: {$question}");
+        list($question, $correctAnswer) = $roundData();
+        line("Question: {$question}");
         $userAnswer = \cli\prompt("Your answer: ");
         if ($correctAnswer !== $userAnswer) {
-            \cli\line("{$userAnswer} is wrong answer ;(. Correct answer was {$correctAnswer}.");
-            \cli\line("Let's try again, {$name}");
+            line("{$userAnswer} is wrong answer ;(. Correct answer was {$correctAnswer}.");
+            line("Let's try again, {$name}");
             return;
         }
-        \cli\line("Correct!");
+        line("Correct!");
     }
-    \cli\line("Congratulations, {$name}");
+    line("Congratulations, {$name}");
 }

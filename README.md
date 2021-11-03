@@ -6,3 +6,6 @@
 
 How to play "Even Game" :
 [![asciicast](https://asciinema.org/a/p7mOT1v9IDbaB8ZaGxLw474s3.svg)](https://asciinema.org/a/p7mOT1v9IDbaB8ZaGxLw474s3)
+
+How to play "Calc Game" :
+[![asciicast](https://asciinema.org/a/Y8rcf0rIyJlFTqY3d3JtNAVpy.svg)](https://asciinema.org/a/Y8rcf0rIyJlFTqY3d3JtNAVpy)

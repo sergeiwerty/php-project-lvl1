@@ -10,6 +10,6 @@ if (file_exists($autoloadPath1)) {
     require_once $autoloadPath2;
 }
 
-use Brain\Games\BrainEven;
+use function Brain\Games\BrainEven\runEvenGame;
 
-BrainEven();
+runEvenGame();
