@@ -12,7 +12,7 @@ function gcdCalc(int $num1, int $num2): int
     return gcdCalc($num2, $num1 % $num2);
 }
 
-function runGcdGame(): callable
+function runGcdGame(): any
 {
     $description = "Find the greatest common divisor of given numbers.";
     $roundData = function (): array {

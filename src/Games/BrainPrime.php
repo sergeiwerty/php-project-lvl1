@@ -17,7 +17,7 @@ function isPrime(int $number): bool
     return true;
 }
 
-function runPrimeGame(): callable
+function runPrimeGame(): any
 {
     $description = "Answer 'yes' if given number is prime. Otherwise answer 'no'.";
     $roundData = function (): array {

@@ -25,7 +25,7 @@ function calculate(string $operator, int $operand1, int $operand2): int
     }
 }
 
-function runCalcGame(): callable
+function runCalcGame(): any
 {
     $description = "What is the result of the expression?";
     $roundData = function (): array {
