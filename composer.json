@@ -8,6 +8,7 @@
             "src/Games/BrainCalc.php",
             "src/Games/BrainGcd.php",
             "src/Games/BrainProgression.php",
+            "src/Games/BrainPrime.php",
             "src/Engine.php"
         ]
     },
@@ -25,7 +26,8 @@
         "bin/brain-even",
         "bin/brain-calc",
         "bin/brain-gcd",
-        "bin/brain-progression"
+        "bin/brain-progression",
+        "bin/brain-prime"
     ],
     "license": "MIT",
     "require-dev": {

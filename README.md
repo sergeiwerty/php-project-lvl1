@@ -15,3 +15,6 @@ How to play "GCD Game" :
 
 How to play "Progression Game"
 [![asciicast](https://asciinema.org/a/DC6YcrhDSfM4m1sEJrsGjRfQE.svg)](https://asciinema.org/a/DC6YcrhDSfM4m1sEJrsGjRfQE)
+
+How to play "Prime Game"
+[![asciicast](https://asciinema.org/a/VkOFlawbytyWapl6rgC7ApdvP.svg)](https://asciinema.org/a/VkOFlawbytyWapl6rgC7ApdvP)
