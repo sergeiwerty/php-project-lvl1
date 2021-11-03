@@ -12,3 +12,6 @@ How to play "Calc Game" :
 
 How to play "GCD Game" :
 [![asciicast](https://asciinema.org/a/3LGqYtxby852LnGvElypCtGNI.svg)](https://asciinema.org/a/3LGqYtxby852LnGvElypCtGNI)
+
+How to play "Progression Game"
+[![asciicast](https://asciinema.org/a/DC6YcrhDSfM4m1sEJrsGjRfQE.svg)](https://asciinema.org/a/DC6YcrhDSfM4m1sEJrsGjRfQE)
