@@ -19,7 +19,7 @@ function runEngine($description, $roundData)
         $userAnswer = \cli\prompt("Your answer: ");
         if ($correctAnswer !== $userAnswer) {
             line("{$userAnswer} is wrong answer ;(. Correct answer was {$correctAnswer}.");
-            line("Let's try again, {$name}");
+            line("Let's try again, {$name}!");
             return;
         }
         line("Correct!");
