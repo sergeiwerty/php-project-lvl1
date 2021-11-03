@@ -5,7 +5,7 @@ namespace Brain\Games\Engine;
 use function cli\line as line;
 use function cli\prompt as prompt;
 
-function runEngine($description, $roundData)
+function runEngine(string $description, callable $roundData): void
 {
     $roundsCount = 3;
 

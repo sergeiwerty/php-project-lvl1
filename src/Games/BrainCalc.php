@@ -11,7 +11,7 @@ function generateRandomOperation(): string
     return $operators[$index];
 }
 
-function calculate($operator, $operand1, $operand2)
+function calculate(string $operator, int $operand1, int $operand2): int
 {
     switch ($operator) {
         case '+':
@@ -25,10 +25,10 @@ function calculate($operator, $operand1, $operand2)
     }
 }
 
-function runCalcGame()
+function runCalcGame(): callable
 {
     $description = "What is the result of the expression?";
-    $roundData = function () {
+    $roundData = function (): array {
         $operand1 = rand(0, 99);
         $operand2 = rand(0, 99);
         $operator = generateRandomOperation();

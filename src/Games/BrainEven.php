@@ -4,15 +4,15 @@ namespace Brain\Games\BrainEven;
 
 use function Brain\Games\Engine\runEngine;
 
-function isEven($num): bool
+function isEven(int $num): bool
 {
     return $num % 2 === 0;
 }
 
-function runEvenGame()
+function runEvenGame(): callable
 {
     $description = "Answer 'yes' if the number is even, otherwise answer 'no'.";
-    $roundData = function () {
+    $roundData = function (): array {
         $num = rand(0, 99);
         $question = strval($num);
         $correctAnswer = isEven($num) ? 'yes' : 'no';

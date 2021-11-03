@@ -4,7 +4,7 @@ namespace Brain\Games\BrainProgression;
 
 use function Brain\Games\Engine\runEngine;
 
-function makeProgression($firstMember, $diff, $progressionLength)
+function makeProgression(int $firstMember, int $diff, int $progressionLength): array
 {
     $progression = [];
     for ($index = 0; $index < $progressionLength; $index += 1) {
@@ -13,10 +13,10 @@ function makeProgression($firstMember, $diff, $progressionLength)
     return $progression;
 }
 
-function runProgressionGame()
+function runProgressionGame(): callable
 {
     $description = "What number is missing in the progression?";
-    $roundData = function () {
+    $roundData = function (): array {
         $progressionLength = rand(5, 10);
         $firstMember = rand(0, 99);
         $progression = makeProgression($firstMember, rand(5, 20), $progressionLength);
