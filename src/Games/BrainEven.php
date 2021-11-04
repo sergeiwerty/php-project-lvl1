@@ -9,7 +9,7 @@ function isEven(int $num): bool
     return $num % 2 === 0;
 }
 
-function runEvenGame(): any
+function runEvenGame(): mixed
 {
     $description = "Answer 'yes' if the number is even, otherwise answer 'no'.";
     $roundData = function (): array {
