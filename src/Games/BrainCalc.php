@@ -13,6 +13,7 @@ function generateRandomOperation(): string
 
 function calculate(string $operator, int $operand1, int $operand2): int
 {
+    $exception = new Exception("Unknown operator: {$operator}!");
     switch ($operator) {
         case '+':
             return $operand1 + $operand2;
@@ -21,7 +22,7 @@ function calculate(string $operator, int $operand1, int $operand2): int
         case '*':
             return $operand1 * $operand2;
         default:
-            throw new Exception("Unknown operator: {$operator}!");
+            throw $exception;
     }
 }
 
