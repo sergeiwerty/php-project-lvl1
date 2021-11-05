@@ -13,7 +13,7 @@ function makeProgression(int $firstMember, int $diff, int $progressionLength): a
     return $progression;
 }
 
-function runProgressionGame(): any
+function runProgressionGame(): mixed
 {
     $description = "What number is missing in the progression?";
     $roundData = function (): array {
