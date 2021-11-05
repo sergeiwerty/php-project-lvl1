@@ -20,8 +20,10 @@ function runEngine(string $description, callable $roundData): mixed
         if ($correctAnswer !== $userAnswer) {
             line("{$userAnswer} is wrong answer ;(. Correct answer was {$correctAnswer}.");
             line("Let's try again, {$name}!");
+            return false;
         }
         line("Correct!");
     }
     line("Congratulations, {$name}!");
+    return true;
 }
