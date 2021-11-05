@@ -5,7 +5,7 @@ namespace Brain\Games\Engine;
 use function cli\line as line;
 use function cli\prompt as prompt;
 
-function runEngine(string $description, callable $roundData): void
+function runEngine(string $description, callable $roundData): mixed
 {
     $roundsCount = 3;
 
@@ -20,7 +20,6 @@ function runEngine(string $description, callable $roundData): void
         if ($correctAnswer !== $userAnswer) {
             line("{$userAnswer} is wrong answer ;(. Correct answer was {$correctAnswer}.");
             line("Let's try again, {$name}!");
-            return;
         }
         line("Correct!");
     }
