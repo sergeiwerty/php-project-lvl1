@@ -13,7 +13,7 @@ function generateRandomOperation(): string
 
 function calculate(string $operator, int $operand1, int $operand2): int
 {
-    $exception = new Exception("Unknown operator: {$operator}!");
+    $exception = new \Exception("Unknown operator: {$operator}!");
     switch ($operator) {
         case '+':
             return $operand1 + $operand2;
