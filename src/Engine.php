@@ -25,5 +25,4 @@ function runEngine(string $description, callable $roundData): void
         line("Correct!");
     }
     line("Congratulations, {$name}!");
-//    return true;
 }
