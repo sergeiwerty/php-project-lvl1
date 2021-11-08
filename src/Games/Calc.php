@@ -8,7 +8,7 @@ const DESCRIPTION = "What is the result of the expression?";
 
 function generateRandomOperation(): string
 {
-    $operators = '+-*';
+    $operators = ['+', '-', '*'];
     $index = rand(0, 2);
     return $operators[$index];
 }
