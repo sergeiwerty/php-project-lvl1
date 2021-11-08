@@ -27,7 +27,7 @@ function calculate(string $operator, int $operand1, int $operand2): int
     }
 }
 
-function runGameCalc(): mixed
+function runGameCalc(): void
 {
     $roundData = function (): array {
         $operand1 = rand(0, 99);
@@ -37,5 +37,5 @@ function runGameCalc(): mixed
         $correctAnswer = strval(calculate($operator, $operand1, $operand2));
         return [$question, $correctAnswer];
     };
-    return runEngine(DESCRIPTION, $roundData);
+    runEngine(DESCRIPTION, $roundData);
 }

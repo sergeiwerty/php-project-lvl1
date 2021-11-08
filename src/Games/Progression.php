@@ -15,7 +15,7 @@ function makeProgression(int $firstMember, int $diff, int $progressionLength): a
     return $progression;
 }
 
-function runGameProgression(): mixed
+function runGameProgression(): void
 {
     $roundData = function (): array {
         $progressionLength = rand(5, 10);
@@ -28,5 +28,5 @@ function runGameProgression(): mixed
         $correctAnswer = strval($hiddenNum);
         return [$question, $correctAnswer];
     };
-    return runEngine(DESCRIPTION, $roundData);
+    runEngine(DESCRIPTION, $roundData);
 }

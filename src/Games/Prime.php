@@ -19,7 +19,7 @@ function isPrime(int $number): bool
     return true;
 }
 
-function runGamePrime(): mixed
+function runGamePrime(): void
 {
     $roundData = function (): array {
         $num = rand(0, 99);
@@ -27,5 +27,5 @@ function runGamePrime(): mixed
         $correctAnswer = isPrime($num) ? 'yes' : 'no';
         return [$question, $correctAnswer];
     };
-    return runEngine(DESCRIPTION, $roundData);
+    runEngine(DESCRIPTION, $roundData);
 }

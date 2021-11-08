@@ -14,7 +14,7 @@ function gcdCalc(int $num1, int $num2): int
     return gcdCalc($num2, $num1 % $num2);
 }
 
-function runGameGcd(): mixed
+function runGameGcd(): void
 {
     $description = "Find the greatest common divisor of given numbers.";
     $roundData = function (): array {
@@ -24,5 +24,5 @@ function runGameGcd(): mixed
         $correctAnswer = strval(gcdCalc($firstNum, $secondNum));
         return [$question, $correctAnswer];
     };
-    return runEngine(DESCRIPTION, $roundData);
+    runEngine(DESCRIPTION, $roundData);
 }
