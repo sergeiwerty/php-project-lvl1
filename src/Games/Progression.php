@@ -4,6 +4,8 @@ namespace Brain\Games\BrainProgression;
 
 use function Brain\Games\Engine\runEngine;
 
+const DESCRIPTION = "What number is missing in the progression?";
+
 function makeProgression(int $firstMember, int $diff, int $progressionLength): array
 {
     $progression = [];
@@ -13,9 +15,8 @@ function makeProgression(int $firstMember, int $diff, int $progressionLength): a
     return $progression;
 }
 
-function runProgressionGame(): mixed
+function runGameProgression(): mixed
 {
-    $description = "What number is missing in the progression?";
     $roundData = function (): array {
         $progressionLength = rand(5, 10);
         $firstMember = rand(0, 99);
@@ -27,5 +28,5 @@ function runProgressionGame(): mixed
         $correctAnswer = strval($hiddenNum);
         return [$question, $correctAnswer];
     };
-    return runEngine($description, $roundData);
+    return runEngine(DESCRIPTION, $roundData);
 }

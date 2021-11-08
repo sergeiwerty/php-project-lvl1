@@ -4,6 +4,8 @@ namespace Brain\Games\BrainCalc;
 
 use function Brain\Games\Engine\runEngine;
 
+const DESCRIPTION = "What is the result of the expression?";
+
 function generateRandomOperation(): string
 {
     $operators = '+-*';
@@ -13,7 +15,6 @@ function generateRandomOperation(): string
 
 function calculate(string $operator, int $operand1, int $operand2): int
 {
-    $exception = new \Exception("Unknown operator: {$operator}!");
     switch ($operator) {
         case '+':
             return $operand1 + $operand2;
@@ -22,13 +23,12 @@ function calculate(string $operator, int $operand1, int $operand2): int
         case '*':
             return $operand1 * $operand2;
         default:
-            throw $exception;
+            throw new \Exception("Unknown operator: {$operator}!");
     }
 }
 
-function runCalcGame(): mixed
+function runGameCalc(): mixed
 {
-    $description = "What is the result of the expression?";
     $roundData = function (): array {
         $operand1 = rand(0, 99);
         $operand2 = rand(0, 99);
@@ -37,5 +37,5 @@ function runCalcGame(): mixed
         $correctAnswer = strval(calculate($operator, $operand1, $operand2));
         return [$question, $correctAnswer];
     };
-    return runEngine($description, $roundData);
+    return runEngine(DESCRIPTION, $roundData);
 }

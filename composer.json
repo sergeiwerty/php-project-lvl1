@@ -3,12 +3,12 @@
     "description": "simple math game on php",
     "autoload": {
         "files": [
-            "src/Games/Cli.php",
-            "src/Games/BrainEven.php",
-            "src/Games/BrainCalc.php",
-            "src/Games/BrainGcd.php",
-            "src/Games/BrainProgression.php",
-            "src/Games/BrainPrime.php",
+            "src/Cli.php",
+            "src/Games/Even.php",
+            "src/Games/Calc.php",
+            "src/Games/Gcd.php",
+            "src/Games/Progression.php",
+            "src/Games/Prime.php",
             "src/Engine.php"
         ]
     },
