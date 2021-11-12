@@ -11,7 +11,7 @@ function isPrime(int $number): bool
     if ($number <= 1) {
         return false;
     }
-    for ($divisor = 2; $divisor < $number; $divisor += 1) {
+    for ($divisor = 2; $divisor < $number; $divisor++) {
         if ($number % $divisor === 0) {
             return false;
         }
@@ -19,7 +19,7 @@ function isPrime(int $number): bool
     return true;
 }
 
-function runGamePrime(): void
+function runGame(): void
 {
     $roundData = function (): array {
         $num = rand(0, 99);

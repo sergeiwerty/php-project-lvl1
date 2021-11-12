@@ -13,7 +13,7 @@ function runEngine(string $description, callable $roundData): void
     $name = prompt('May I have your name? ');
     line("Hello, %s!", $name);
     line($description);
-    for ($i = 0; $i < ROUNDS_COUNT; $i += 1) {
+    for ($i = 0; $i < ROUNDS_COUNT; $i++) {
         list($question, $correctAnswer) = $roundData();
         line("Question: {$question}");
         $userAnswer = \cli\prompt("Your answer: ");

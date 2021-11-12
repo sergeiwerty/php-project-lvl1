@@ -11,7 +11,7 @@ function isEven(int $num): bool
     return $num % 2 === 0;
 }
 
-function runGameEven(): void
+function runGame(): void
 {
     $roundData = function (): array {
         $num = rand(0, 99);

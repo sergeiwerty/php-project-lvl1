@@ -27,7 +27,7 @@ function calculate(string $operator, int $operand1, int $operand2): int
     }
 }
 
-function runGameCalc(): void
+function runGame(): void
 {
     $roundData = function (): array {
         $operand1 = rand(0, 99);
